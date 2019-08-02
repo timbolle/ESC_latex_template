@@ -19,18 +19,20 @@
 %%%%% HEAD: Document Begins
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%\setlength{\parindent}{0pt}
-%\setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
+\selectlanguage{english}
 \frontmatter
 \input{head/titlepage.tex}
-%\include{head/dedication}
-%\setcounter{page}{0}
-%\include{head/acknowledgements}
+\include{head/dedication}
+\setcounter{page}{0}
+\include{head/acknowledgements}
 \include{head/abstracts}
 
-%\cleardoublepage
-%\pdfbookmark{\contentsname}{toc}
-%\tableofcontents
+\cleardoublepage
+\pdfbookmark{\contentsname}{toc}
+\begingroup
+\hypersetup{linkcolor=black}
+\tableofcontents
+\endgroup
 
 % % Following content is OPTIONAL (List of figures + tables)
 % \cleardoublepage
@@ -45,16 +47,17 @@
 % your list of symbols here, if needed.
 
 
-% space before each new paragraph according to the template guidelines.
-%(needs to be after titlepage and frontmatter to keep the table of contents lists short)
-%\setlength{\parskip}{1em}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% MAIN: The chapters or core document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\mainmatter
-
+\mainmatter
+\include{book_template/head/main/chapter1.tex}
+\cleardoublepage
+\part{First part}
+\include{book_template/head/main/chapter2.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% TAIL: Bibliography, Appendix, CV

@@ -6,25 +6,11 @@
 \newcommand{\mail}[1]{{\href{mailto:#1}{#1}}}
 
 
+% No header on white pages
 \makeatletter
-
-\newcommand\frontmatter{%
-    \cleardoublepage
-  %\@mainmatterfalse
-  \pagenumbering{roman}}
-
-\newcommand\mainmatter{%
-    \cleardoublepage
- % \@mainmattertrue
-  \pagenumbering{arabic}}
-
-\newcommand\backmatter{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
- % \@mainmatterfalse
-   }
-
-\makeatother
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
