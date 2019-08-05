@@ -14,19 +14,24 @@
 \input{head/settings_custom.tex}  % place your custom packages, etc... in this file!
 
 
-
+\usepackage{layout}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% HEAD: Document Begins
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\selectlanguage{english}
+
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
-\frontmatter
+%\frontmatter
 \input{head/titlepage.tex}
+\restoregeometry
+%\setlength\headheight{45pt}
+%\setlength\footskip{30pt}
 %\include{head/dedication}
-%\setcounter{page}{0}
 %\include{head/acknowledgements}
 \include{head/abstracts}
+\lipsum[1-10]
 
 %\cleardoublepage
 %\pdfbookmark{\contentsname}{toc}
