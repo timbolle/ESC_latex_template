@@ -2,7 +2,7 @@
 %! Date = 30.07.2019
 
 
-\documentclass[a4paper,12pt, oneside]{book}
+\documentclass[a4paper,12pt, twoside]{book}
 
 % French or english language
 \usepackage[english,french]{babel}
@@ -100,3 +100,17 @@
 
 \usepackage{lipsum}
 
+
+
+% Biblio
+\usepackage[
+			backend=biber,
+			style=iso-authoryear
+			]{biblatex}
+\appto{\bibsetup}{\raggedright}
+
+\addbibresource{tail/bibliography.bib}
+
+% renew command pour que citep fasse parencite
+\newcommand{\citep}[1]{\parencite{#1}}
+\renewcommand{\cite}[1]{\textcite{#1}}
