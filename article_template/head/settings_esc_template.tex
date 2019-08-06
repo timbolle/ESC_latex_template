@@ -24,12 +24,22 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% for code and colors
+\input{head/color_definition.tex}
+\input{head/listings_language_definition.tex}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\Large\bfseries\color{blue_title}}
+%\titleformat*{\subsection}{\normalfont\large\bfseries\color{blue_title}}
+%\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\color{blue_title}}
+
+
 % set the margin
 % Taille des marges
-\usepackage[top=2cm, bottom=4cm, left=2.5cm , right=2.5cm, includehead]{geometry}
+\usepackage[top=2cm, bottom=4cm, left=2.5cm , right=2.5cm, includehead, showframe]{geometry}
 %\usepackage{geometry}
 %\geometry{bindingoffset=1cm} % to bind pages
-
+\usepackage{afterpage}
 
 % to be able to use landscape
 \usepackage{lscape}
@@ -48,9 +58,6 @@
 
 %Pour le header
 \usepackage{fancyhdr}
-
-
-
 
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 \pagestyle{fancy}
@@ -94,10 +101,6 @@
 
 % So tables are adjusted to text
 \usepackage{adjustbox}
-
-% for code and colors
-\input{head/color_definition.tex}
-\input{head/listings_language_definition.tex}
 
 
 \usepackage{lipsum}

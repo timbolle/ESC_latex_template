@@ -25,15 +25,14 @@
 %\setlength{\parskip}{0pt} %(needs to be before titlepage and frontmatter to keep the table of contents lists short)
 %\frontmatter
 \input{head/titlepage.tex}
-\restoregeometry
-%\setlength\headheight{45pt}
-%\setlength\footskip{30pt}
-%\include{head/dedication}
-%\include{head/acknowledgements}
-\include{head/abstracts}
+%\clearpage
+
+\input{head/abstracts.tex}
+\section{The First Section}
+\subsection{With a sub secion}
+\subsubsection*{and again}
 \lipsum[1-10]
 
-%\cleardoublepage
 %\pdfbookmark{\contentsname}{toc}
 %\tableofcontents
 
@@ -47,7 +46,6 @@
 % \phantomsection
 % \addcontentsline{toc}{chapter}{List of Tables} % adds an entry to the table of contents
 % \listoftables
-% your list of symbols here, if needed.
 
 
 % space before each new paragraph according to the template guidelines.

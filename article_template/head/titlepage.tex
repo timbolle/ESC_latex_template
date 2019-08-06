@@ -1,15 +1,24 @@
 %! Author = tbolle
 %! Date = 30.07.2019
 
-\title{Title}
-\author{First name, last name}
-\date{\today}
 
-\newgeometry{top=1.5cm, bottom=4cm, left=2.5cm , right=2.5cm, includehead, showframe}
+\newgeometry{top=1.5cm, bottom=4cm, left=2.5cm , right=2.5cm, includehead}
 \setlength\headheight{81pt}
 \setlength\footskip{56pt}
 
 
-\maketitle
-\setcounter{page}{1}
+\thispagestyle{plain}
+%\vspace*{0.5cm}
+\Huge % size
+\textbf{Magnificient Title}
+%\rule{5cm}{0.2pt}
 
+\large
+\textcolor{gray}{
+Subtitle --- \today
+}
+
+
+
+\setcounter{page}{1}
+\afterpage{\aftergroup\restoregeometry}
